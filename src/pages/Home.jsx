@@ -143,7 +143,7 @@ function Home() {
                 value={task}
                 onChange={(e) => setTask(e.target.value)}
                 type="text"
-                className=" h-10 rounded-2xl bg-amber-50 p-3 mt-5 w-80 text-xs sm:text-sm  sm:w-110 md:w-150 md:text-base lg:w-175 lg:text-base"
+                className="  rounded-2xl bg-amber-50 p-3 mt-5 w-80 text-xs break-all text-ellipsis sm:text-sm  sm:w-110 md:w-150 md:text-base lg:w-175 lg:text-base"
                 placeholder="Schedule your task"
               />
 
@@ -155,11 +155,11 @@ function Home() {
               </button>
             </div>
 
-            <div className="mt-6 p-3 text-gray-600 flex  flex-col justify-center items-center">
+            <div className="mt-6 p-3 text-gray-600 flex  flex-col justify-center items-center ">
               {tasks.map((t, i) => (
                 <div
                   key={i}
-                  className="bg-amber-50 rounded-2xl p-3 h-12  mt-3 w-85 sm:w-110 md:w-130 lg:w-150"
+                  className="bg-amber-50 rounded-2xl p-3   mt-3 w-85 break-all  text-ellipsis sm:w-110 md:w-130 lg:w-150"
                 >
                   <div className="flex justify-between items-center">
                     <span>
@@ -167,7 +167,7 @@ function Home() {
                         <input
                           value={t.title}
                           onChange={(e) => handleEditChange(i, e.target.value)}
-                          className="bg-amber-100 border px-2 py-1 rounded"
+                          className="bg-amber-100 border px-2 py-1 rounded break-words overflow-hidden text-ellipsis"
                         />
                       ) : (
                         <span
@@ -184,19 +184,19 @@ function Home() {
                         onClick={() =>
                           t.editing ? handleEditSave(i) : toggleEdit(i)
                         }
-                        className=" bg-none text-black hover:cursor-pointer hover:shadow-yellow-400 shadow-2xl rounded-md h-4.5 w-7  !text-xs sm:h-6 sm:w-10 md:h-7 md:w-14 lg:h-8 lg:w-18"
+                        className=" bg-none text-black hover:cursor-pointer hover:shadow-yellow-400 shadow-2xl rounded-md h-4 w-4  !text-xs "
                       >
                         {t.editing ? "Save" : "✏️"}
                       </button>
                       <button
                         onClick={() => toggleComplete(i)}
-                        className=" bg-none text-white hover:cursor-pointer hover:shadow-green-600 shadow-2xl  h-4 w-4  !text-xs sm:h-6 sm:w-10 md:h-7 md:w-14 lg:h-8 lg:w-18"
+                        className=" bg-none text-white hover:cursor-pointer hover:shadow-green-600 shadow-2xl  h-4 w-4  !text-xs "
                       >
                         ✅
                       </button>
                       <button
                         onClick={() => handleDeleteTask(i)}
-                        className=" bg-none text-white hover:cursor-pointer hover:shadow-red-700 shadow-2xl h-4 w-4  !text-xs sm:h-6 sm:w-10 md:h-7 md:w-14 lg:h-8 lg:w-18"
+                        className=" bg-none text-white hover:cursor-pointer hover:shadow-red-700 shadow-2xl h-4 w-4  !text-xs "
                       >
                         ❌
                       </button>
