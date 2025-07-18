@@ -143,7 +143,7 @@ function Home() {
                 value={task}
                 onChange={(e) => setTask(e.target.value)}
                 type="text"
-                className="  rounded-2xl bg-amber-50 p-3 mt-5 w-80 text-xs break-all text-ellipsis sm:text-sm  sm:w-110 md:w-150 md:text-base lg:w-175 lg:text-base"
+                className=" rounded-2xl bg-amber-50 p-3 mt-5 w-80 text-xs break-all text-ellipsis sm:text-sm  sm:w-110 md:w-150 md:text-base lg:w-175 lg:text-base"
                 placeholder="Schedule your task"
               />
 
@@ -184,7 +184,7 @@ function Home() {
                         onClick={() =>
                           t.editing ? handleEditSave(i) : toggleEdit(i)
                         }
-                        className=" bg-none text-black hover:cursor-pointer hover:shadow-yellow-400 shadow-2xl rounded-md h-4 w-4  !text-xs "
+                        className=" bg-none text-black hover:cursor-pointer hover:shadow-yellow-400 shadow-2xl rounded-md h-4 w-6.5  !text-xs "
                       >
                         {t.editing ? "Save" : "✏️"}
                       </button>
