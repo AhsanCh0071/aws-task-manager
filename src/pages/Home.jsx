@@ -128,7 +128,7 @@ function Home() {
             <div>
               <button
                 onClick={signOut}
-                className="bg-red-700 text-white hover:cursor-pointer hover:shadow-red-700 shadow-2xl rounded-2xl mt-3 ml-80 h-5 w-14 !text-xs sm:text-sm sm-h-8 sm:w-17 sm:ml-160 md:h-10 md:w-20  md:ml-192 md:text-base lg:ml-285 lg:text-base lg:h-10 lg:w-20"
+                className="bg-red-700 text-white hover:cursor-pointer hover:shadow-red-700 shadow-2xl rounded-2xl mt-3 ml-70 h-5 w-14 !text-xs sm:text-sm sm-h-8 sm:w-17 sm:ml-160 md:h-10 md:w-20  md:ml-192 md:text-base lg:ml-285 lg:text-base lg:h-10 lg:w-20"
               >
                 Logout
               </button>
@@ -159,7 +159,7 @@ function Home() {
               {tasks.map((t, i) => (
                 <div
                   key={i}
-                  className="bg-amber-50 rounded-2xl p-3 h-12  mt-3 w-90 sm:w-110 md:w-130 lg:w-150"
+                  className="bg-amber-50 rounded-2xl p-3 h-12  mt-3 w-85 sm:w-110 md:w-130 lg:w-150"
                 >
                   <div className="flex justify-between items-center">
                     <span>
@@ -184,21 +184,21 @@ function Home() {
                         onClick={() =>
                           t.editing ? handleEditSave(i) : toggleEdit(i)
                         }
-                        className=" bg-yellow-400 text-white hover:cursor-pointer hover:shadow-yellow-400 shadow-2xl rounded-2xl h-7 w-15 !text-xs"
+                        className=" bg-none text-black hover:cursor-pointer hover:shadow-yellow-400 shadow-2xl rounded-md h-4.5 w-7  !text-xs sm:h-6 sm:w-10 md:h-7 md:w-14 lg:h-8 lg:w-18"
                       >
-                        {t.editing ? "Save" : "Edit"}
+                        {t.editing ? "Save" : "✏️"}
                       </button>
                       <button
                         onClick={() => toggleComplete(i)}
-                        className="h-7 w-15 bg-green-600 text-white hover:cursor-pointer hover:shadow-green-600 shadow-2xl rounded-2xl !text-xs"
+                        className=" bg-none text-white hover:cursor-pointer hover:shadow-green-600 shadow-2xl  h-4 w-4  !text-xs sm:h-6 sm:w-10 md:h-7 md:w-14 lg:h-8 lg:w-18"
                       >
-                        Complete
+                        ✅
                       </button>
                       <button
                         onClick={() => handleDeleteTask(i)}
-                        className="h-7 w-15 bg-red-700 text-white hover:cursor-pointer hover:shadow-red-700 shadow-2xl rounded-2xl !text-xs"
+                        className=" bg-none text-white hover:cursor-pointer hover:shadow-red-700 shadow-2xl h-4 w-4  !text-xs sm:h-6 sm:w-10 md:h-7 md:w-14 lg:h-8 lg:w-18"
                       >
-                        Delete
+                        ❌
                       </button>
                     </div>
                   </div>
